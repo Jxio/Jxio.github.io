@@ -1,17 +1,42 @@
 body {
+  .side-bar-toggle.ui.button{
+    font-size: 0.9rem;
+  }
   #page-title {
+    display: inline;
     height: calc(5vh);
-    padding-left: 10%;
+    padding-left: 5%;
     line-height: calc(5vh);
+    position: sticky;
+    top: 0;
+    background-color: white;
   }
 
   #page-content {
     height: calc(90vh);
-    // margin-top: calc(40vh);
     .huge {
       font-size: xxx-large;
     }
+    #home-screen {
+      text-align: center;
+      line-height: calc(50vh);
+      height: calc(50vh);
+      transform: scale(0.75);
+      h1 {
+        font-size: 5rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
+      h3 {
+        font-size: 1.7rem;
+      }
+    }
+    #side-bar {
+      z-index: 10;
+    }
   }
+
 
   #page-footer {
     font: Serif;

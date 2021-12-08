@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Container, Divider, Header, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
+import Intro from './Intro';
 import SignPanel from './SignPanel';
 
 class Home extends Component {
@@ -8,6 +9,7 @@ class Home extends Component {
     this.state = {
       overlayActive: false,
       sidebarVisible: false,
+      panel: 'intro',
     }
   }
 
@@ -19,40 +21,47 @@ class Home extends Component {
     this.setState({sidebarVisible: !this.state.sidebarVisible});
   }
 
+  changePanel(e){
+    this.setState({panel: e});
+  }
+
   render() {
-    const { overlayActive } = this.state;
+    const { overlayActive, sidebarVisible, panel } = this.state;
     return (
       <div>
         <Container fluid>
-          <Header as='h3' id="page-title">
-            I'm Jia, a software developer
-          </Header>
+          <Container fluid>
+            <Button
+              className="side-bar-toggle"
+              icon='angle double down'
+              la="true"
+              label="contents"
+              onClick={this.setVisible}
+            />
+            <Header as='h3' id="page-title">
+              Welcome to my Portfolio
+            </Header>
+          </Container>
 
           <Container id="page-content" fluid>
-            <Sidebar.Pushable as={Segment}>
+            <Sidebar.Pushable as={Segment} id="side-bar">
               <Sidebar
                 as={Menu}
-                animation='overlay'
+                animation="scale down"
                 icon='labeled'
-                onHide={() => setVisible()}
                 inverted
                 vertical
-                visible
+                visible = {sidebarVisible}
                 width='thin'
               >
                 <Menu.Item as='a'>
-                  <Icon name='home' />
+                  <Icon name='home' value='intro' onClick={() => this.changePanel('intro')}/>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>
-                  {/* <Icon name='gamepad' /> */}
-                  Games
-                </Menu.Item>
-                <Menu.Item as='a'>
-                  {/* <Icon name='camera' /> */}
-                  Channels
-                </Menu.Item>
               </Sidebar>
+
+              {panel === 'intro' && <Intro />}
+
             </Sidebar.Pushable>
           </Container>
 
