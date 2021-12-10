@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Container, Divider, Header, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
+import { Button, Container, Divider, Feed, Header, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
+import myImg from '../../public/me.jpg';
 
 class Intro extends Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class Intro extends Component {
     return (
       <Sidebar.Pusher id="home-screen">
         <Segment basic>
-          <Container textAlign="left">
+          <img src={myImg} className="ui medium image  my-image"/>
+          <Container textAlign="left" fluid>
             <Header as='h1'>Hey, I'm Jia</Header>
             <Header as='h2'>a Software Developer</Header>
             <Header as='h3'>I am living in Canada now</Header>

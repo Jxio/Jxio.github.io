@@ -10,6 +10,21 @@ body {
     position: sticky;
     top: 0;
     background-color: white;
+    .follow-set {
+      margin-left: 12rem;
+    }
+    .follow-txt {
+      font-size: x-small;
+    }
+    @media only screen and (max-width: 991px){
+      .follow-txt {
+        display: none;
+      }
+    }
+    .follow-icon {
+      margin: 1rem;
+      display: inline;
+    }
   }
 
   #page-content {
@@ -22,6 +37,7 @@ body {
       line-height: calc(50vh);
       height: calc(50vh);
       transform: scale(0.75);
+      margin-left: 10rem;
       h1 {
         font-size: 5rem;
       }
@@ -34,6 +50,24 @@ body {
     }
     #side-bar {
       z-index: 10;
+    }
+    .ui.medium.image.my-image {
+      border-radius: 100%;
+      float: right;
+      margin-right: 50rem;
+    }
+    @media only screen and (max-width: 991px){
+      #home-screen {
+        margin-left: 0rem;
+      }
+      .ui.medium.image.my-image {
+        display: none;
+        }
+    }
+    @media only screen and (max-width: 1500px){
+      .ui.medium.image.my-image {
+        margin-right: 20rem;
+        }
     }
   }
 

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Container, Divider, Header, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
 import Intro from './Intro';
-import SignPanel from './SignPanel';
+import githubIcon from '../../public/GitHub-Mark-32px.png';
+import linkedinIcon from '../../public/LI-In-Bug.png';
 
 class Home extends Component {
   constructor(props) {
@@ -39,8 +40,14 @@ class Home extends Component {
               onClick={this.setVisible}
             />
             <Header as='h3' id="page-title">
-              Welcome to my Portfolio
+              <span className="title">Welcome to my Portfolio</span>
+              <span className="follow-set">
+                <text className="follow-txt">contact me:</text>
+                <a href="https://github.com/Jxio"><img className="image ui mini follow-icon" src={githubIcon} /></a>
+                <a href="http://www.linkedin.com/in/linkin-jiax"><img className="image ui mini follow-icon" src={linkedinIcon} /></a>
+              </span>
             </Header>
+
           </Container>
 
           <Container id="page-content" fluid>
