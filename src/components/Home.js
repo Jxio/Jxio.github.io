@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Container, Divider, Header, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
 import Intro from './Intro';
-import githubIcon from '../../public/GitHub-Mark-32px.png';
-import linkedinIcon from '../../public/LI-In-Bug.png';
+import WebPanel from './WebPanel';
 
 class Home extends Component {
   constructor(props) {
@@ -28,6 +27,7 @@ class Home extends Component {
 
   render() {
     const { overlayActive, sidebarVisible, panel } = this.state;
+    console.log(panel);
     return (
       <div>
         <Container fluid>
@@ -42,9 +42,9 @@ class Home extends Component {
             <Header as='h3' id="page-title">
               <span className="title">Welcome to my Portfolio</span>
               <span className="follow-set">
-                <text className="follow-txt">contact me:</text>
-                <a href="https://github.com/Jxio"><img className="image ui mini follow-icon" src={githubIcon} /></a>
-                <a href="http://www.linkedin.com/in/linkin-jiax"><img className="image ui mini follow-icon" src={linkedinIcon} /></a>
+                <span className="follow-txt">contact me:</span>
+                <a href="https://github.com/Jxio"><Icon name="github" size="large" /></a>
+                <a href="http://www.linkedin.com/in/linkin-jiax"><Icon name="linkedin square" size="large" /></a>
               </span>
             </Header>
 
@@ -61,13 +61,26 @@ class Home extends Component {
                 visible = {sidebarVisible}
                 width='thin'
               >
-                <Menu.Item as='a'>
-                  <Icon name='home' value='intro' onClick={() => this.changePanel('intro')}/>
+                <Menu.Item as='a' onClick={() => this.changePanel('intro')}>
+                  <Icon name='home' value='intro'/>
                   Home
+                </Menu.Item>
+                <Menu.Item as='a' onClick={() => this.changePanel('react')}>
+                  <Icon inverted color='grey' name='file outline' />
+                  Web
+                </Menu.Item>
+                <Menu.Item as='a' onClick={() => this.changePanel('react')}>
+                  <Icon name='file code outline' value='react'/>
+                  C#
+                </Menu.Item>
+                <Menu.Item as='a' onClick={() => this.changePanel('react')}>
+                  <Icon name="code" />
+                  Python
                 </Menu.Item>
               </Sidebar>
 
               {panel === 'intro' && <Intro />}
+              {panel === 'react' && <WebPanel />}
 
             </Sidebar.Pushable>
           </Container>
