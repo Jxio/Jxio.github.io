@@ -1,3 +1,10 @@
-# Jxio.github.io
 
-This website built with Bootstrap, Html, CSS, Javascript, ParticlesJS
+Welcome to my blog: https://jxio.github.io/#/
+
+Technologies
+
+Front-end framework: React;
+
+Mordern build tool: Webpack;
+
+Mordern styling approach: Semantic-ui-react
