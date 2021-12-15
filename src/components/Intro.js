@@ -19,7 +19,7 @@ class Intro extends Component {
             <Header as='h1'>Hey, I'm Jia</Header>
             <Header as='h2'>a Software Developer</Header>
             <Header as='h3'>I am living in Canada now</Header>
-            <Header as='h3'>I am working as a developer/analyst at Forte Consult.Ltd</Header>
+            <Header as='h3'>I am working as a developer/analyst at Forte Consulting.Ltd</Header>
             <Header as='h3'>I graduated from University of Victoria, Software Engineering</Header>
             <Header as='h3'>I have experience in web development and data visualization field</Header>
             <Header as='h3'>I have experience with Javascript, Typescript, HTML5, Scss, Python, C#, Oracle SQL, REST API</Header>

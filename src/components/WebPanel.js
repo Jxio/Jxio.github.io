@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Accordion, Container, Header, Segment, Sidebar } from 'semantic-ui-react';
+import { Accordion, Container, Divider, Header, Segment, Sidebar } from 'semantic-ui-react';
 import _ from 'lodash';
 import * as blogs from "../../blogs";
 
@@ -16,7 +16,8 @@ class WebPanel extends Component {
       <Sidebar.Pusher className="main-content">
         <Segment basic>
           <Container textAlign="left" fluid>
-            <Header as='h1'>Web Dev Notes</Header>
+            <Header as='h2'>Web Dev Notes</Header>
+            <Divider />
             <Accordion
               defaultActiveIndex={[]}
               panels={blogs.web}

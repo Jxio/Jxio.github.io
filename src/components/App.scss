@@ -2,12 +2,17 @@ body {
   .side-bar-toggle.ui.button{
     font-size: 0.9rem;
   }
+  #page-header-bar {
+    position: -webkit-sticky;
+    position: sticky;
+  }
   #page-title {
     display: inline;
     height: calc(5vh);
     padding-left: 5%;
     line-height: calc(5vh);
-    position: sticky;
+
+    z-index: 1000;
     top: 0;
     background-color: white;
     .follow-set {
@@ -29,20 +34,31 @@ body {
   }
 
   #page-content {
-    height: calc(90vh);
+    // min-height: calc(90vh);
     .huge {
       font-size: xxx-large;
     }
     .main-content {
-      transform: scale(0.8);
+      overflow-y: scroll !important;
+      h2 {
+        font-size: 3rem;
+      }
+      transform: scale(0.9);
       .ui.segment {
         font-size: 1.7rem;
       }
+      .ui.accordion .title:not(.ui) {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2rem;
+      }
     }
+
     #home-screen {
       text-align: center;
-      line-height: calc(50vh);
-      height: calc(50vh);
+      // line-height: calc(50vh);
+      // height: calc(50vh);
       transform: scale(0.75);
       h1 {
         font-size: 5rem;
@@ -56,6 +72,7 @@ body {
     }
     #side-bar {
       z-index: 10;
+      min-height: 90vh;
     }
     .ui.medium.image.my-image {
       border-radius: 100%;

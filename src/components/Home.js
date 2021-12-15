@@ -31,7 +31,7 @@ class Home extends Component {
     return (
       <div>
         <Container fluid>
-          <Container fluid>
+          <Container fluid id="page-header-bar">
             <Button
               className="side-bar-toggle"
               icon='angle double down'
@@ -42,7 +42,7 @@ class Home extends Component {
             <Header as='h3' id="page-title">
               <span className="title">Welcome to my Portfolio</span>
               <span className="follow-set">
-                <span className="follow-txt">contact me:</span>
+                <span className="follow-txt">follow/contact me:</span>
                 <a href="https://github.com/Jxio"><Icon name="github" size="large" /></a>
                 <a href="http://www.linkedin.com/in/linkin-jiax"><Icon name="linkedin square" size="large" /></a>
               </span>
