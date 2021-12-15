@@ -27,7 +27,7 @@ class Home extends Component {
 
   render() {
     const { overlayActive, sidebarVisible, panel } = this.state;
-    console.log(panel);
+
     return (
       <div>
         <Container fluid>
