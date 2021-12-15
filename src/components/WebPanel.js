@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Accordion, Button, Container, Divider, Feed, Header, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
-import myImg from '../../public/me.jpg';
+import { Accordion, Container, Header, Segment, Sidebar } from 'semantic-ui-react';
 import _ from 'lodash';
-import blogs from "../../blogs.json";
+import * as blogs from "../../blogs";
 
 class WebPanel extends Component {
   constructor(props) {
@@ -17,6 +16,7 @@ class WebPanel extends Component {
       <Sidebar.Pusher className="main-content">
         <Segment basic>
           <Container textAlign="left" fluid>
+            <Header as='h1'>Web Dev Notes</Header>
             <Accordion
               defaultActiveIndex={[]}
               panels={blogs.web}

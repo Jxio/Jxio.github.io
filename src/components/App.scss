@@ -34,14 +34,8 @@ body {
       font-size: xxx-large;
     }
     .main-content {
-      transform: scale(0.75);
-      h1 {
-        font-size: 5rem;
-      }
-      h2 {
-        font-size: 3rem;
-      }
-      h3 {
+      transform: scale(0.8);
+      .ui.segment {
         font-size: 1.7rem;
       }
     }
